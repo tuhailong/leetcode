@@ -13,19 +13,20 @@ import java.util.Queue;
  */
 class Exam191122 {
     private static final HashSet<Character> UPPER_CASES = new HashSet<>();
+
     static {
         for (int i = 'A'; i <= 'Z'; i++) {
-            UPPER_CASES.add((char)i);
+            UPPER_CASES.add((char) i);
         }
     }
 
     /**
-    单词首字母大写，处理字符串，要求以单词为单位进行倒序处理，
-    例如：
-    输入：“MyNameIsTom”
-    输出： “yMemaNsImoT”
-    输入：“LowLL”
-    输出：“woLLL”
+     * 单词首字母大写，处理字符串，要求以单词为单位进行倒序处理，
+     * 例如：
+     * 输入：“MyNameIsTom”
+     * 输出： “yMemaNsImoT”
+     * 输入：“LowLL”
+     * 输出：“woLLL”
      */
     public String reverseSentence(String str) {
         StringBuilder ans = new StringBuilder();
@@ -82,9 +83,9 @@ class Exam191122 {
      * PID: [1, 3, 10, 5]
      * PPID:[3, 0, 5, 3]
      * kill: 5
-     *     3
-     *    / \
-     *   1   5
+     *    3
+     *  /   \
+     * 1     5
      *      /
      *     10
      * 输出: [10, 5]
@@ -122,6 +123,6 @@ class Exam191122 {
         Exam191122 ni = new Exam191122();
         System.out.println(ni.reverseSentence("LowLL"));
         System.out.println(ni.reverseSentence("MyNameIsTom"));
-        System.out.println(ni.swap(new int[]{1, 2, 3, 4, 5}));
+        System.out.println(ni.swap(new int[] {1, 2, 3, 4, 5}));
     }
 }
