@@ -24,7 +24,7 @@ package com.tuhailong.leetcode.greedy;
  * 结果不会超过 32 位有符号整数范围。
  * 链接：https://leetcode-cn.com/problems/4-keys-keyboard
  *
- * @author t00278867
+ * @author tuhailong
  * @since 2019-11-23
  */
 class LeetCode651 {

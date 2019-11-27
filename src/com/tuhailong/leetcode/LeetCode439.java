@@ -33,7 +33,7 @@ import java.util.Stack;
  *           -> "F"                                     -> "F"
  * 链接：https://leetcode-cn.com/problems/ternary-expression-parser
  *
- * @author t00278867
+ * @author tuhailong
  * @since 2019-11-23
  */
 class LeetCode439 {

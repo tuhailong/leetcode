@@ -8,6 +8,9 @@ import java.util.Arrays;
  * 输入: nums = [3,5,2,1,6,4]
  * 输出: 一个可能的解答是 [3,5,1,6,2,4]
  * 链接：https://leetcode-cn.com/problems/wiggle-sort
+ *
+ * @author tuhailong
+ * @since 2019-11-26
  */
 public class LeetCode280 {
     public void wiggleSort(int[] nums) {

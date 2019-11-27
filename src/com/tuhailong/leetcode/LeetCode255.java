@@ -21,7 +21,7 @@ import java.util.Stack;
  * 您能否使用恒定的空间复杂度来完成此题？
  * 链接：https://leetcode-cn.com/problems/verify-preorder-sequence-in-binary-search-tree
  *
- * @author t00278867
+ * @author tuhailong
  * @since 2019-11-23
  */
 class LeetCode255 {
