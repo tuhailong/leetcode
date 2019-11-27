@@ -2,8 +2,6 @@ package com.tuhailong.leetcode.tree;
 
 import com.tuhailong.leetcode.TreeNode;
 
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Stack;
 
 /**
