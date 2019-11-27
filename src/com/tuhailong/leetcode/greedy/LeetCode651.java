@@ -42,14 +42,25 @@ class LeetCode651 {
         if (N < 7) {
             return N;
         }
-        int[] cnts = new int[N + 1];
-        cnts[0] = 0;
-        for (int i = 1; i < cnts.length; i++) {
-            cnts[i] = cnts[i - 1] + 1;
-            for (int j = 2; j + 1 < i; j++) {
-                cnts[i] = Math.max(cnts[i], cnts[j - 1] * (i - j));
+        int[] ans = new int[N + 1];
+        ans[0] = 0;
+        for (int i = 1; i < ans.length; i++) {
+            // 按下KEY1,增加一个"A"
+            ans[i] = ans[i - 1] + 1;
+            if (i < 7) {
+                continue;
+            }
+            for (int j = 2; j <= i ; j++) {
+                // 按下KEY4,将已有的内容粘贴一份
+                int tmp = ans[j - 1] * (i - j);
+                ans[i] = Math.max(ans[i], tmp);
             }
         }
-        return cnts[N];
+        return ans[N];
+    }
+
+    public static void main(String[] args) {
+        LeetCode651 ni = new LeetCode651();
+        System.out.println(ni.maxA(7));
     }
 }
