@@ -2,6 +2,8 @@ package com.tuhailong.leetcode.tree;
 
 import com.tuhailong.leetcode.TreeNode;
 
+import java.util.HashMap;
+
 /**
  * 根据一棵树的前序遍历与中序遍历构造二叉树。
  * 注意:
@@ -21,29 +23,36 @@ import com.tuhailong.leetcode.TreeNode;
  * @since 2019-11-27
  */
 public class LeetCode105 {
-    public TreeNode buildTree(int[] preOrder, int[] inOrder) {
-        return helper(preOrder, inOrder, 0, 0, inOrder.length);
-    }
-
-    private TreeNode helper(int[] preOrder, int[] inOrder,
-                            int preStart, int inStart, int length) {
-        if (length == 0) {
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        if (preorder == null || inorder == null || preorder.length != inorder.length) {
             return null;
         }
-        int root = preOrder[preStart];
-        TreeNode treeNode = new TreeNode(root);
-        if (length == 1) {
-            return treeNode;
+        HashMap<Integer, Integer> inorderMap = new HashMap<>();
+        for (int i = 0; i < inorder.length; i++) {
+            inorderMap.put(inorder[i], i);
         }
-        for (int i = length - 1; i >= 0; i--) {
-            if (root == inOrder[inStart + i]) {
-                treeNode.left = helper(preOrder, inOrder,
-                        preStart + 1, inStart, i);
-                treeNode.right = helper(preOrder, inOrder,
-                        preStart + 1 + i, inStart + i + 1, length - i - 1);
-                return treeNode;
-            }
+        return helper(preorder, 0, preorder.length,
+            inorder, 0, inorder.length,
+            inorderMap);
+    }
+
+    private TreeNode helper(int[] preorder, int preorderLeft, int preorderRight,
+            int[] inorder, int inorderLeft, int inorderRight,
+            HashMap<Integer, Integer> inorderMap) {
+        if (preorderLeft >= preorderRight || inorderLeft >= inorderRight) {
+            return null;
         }
-        return null;
+        int value = preorder[preorderLeft];
+        TreeNode root = new TreeNode(value);
+        int index = inorderMap.get(value);
+        // 左子树结点数量
+        int count = index - inorderLeft;
+        root.left = helper(preorder, preorderLeft + 1, preorderLeft + count + 1,
+            inorder, inorderLeft, index,
+            inorderMap);
+        root.right = helper(preorder, preorderLeft + count + 1, preorderRight,
+            inorder, index + 1, inorderRight,
+            inorderMap);
+        return root;
     }
 }
