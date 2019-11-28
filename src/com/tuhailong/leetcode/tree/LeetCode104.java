@@ -1,5 +1,6 @@
-package com.tuhailong.leetcode;
+package com.tuhailong.leetcode.tree;
 
+import com.tuhailong.leetcode.TreeNode;
 import javafx.util.Pair;
 import java.util.LinkedList;
 import java.util.Queue;
