@@ -1,4 +1,4 @@
-package com.tuhailong.leetcode;
+package com.tuhailong.leetcode.string;
 
 import java.util.Collections;
 import java.util.HashMap;

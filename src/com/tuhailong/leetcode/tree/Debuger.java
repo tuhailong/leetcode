@@ -56,4 +56,13 @@ class Debuger {
     public static String booleanToString(boolean input) {
         return input ? "True" : "False";
     }
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        String line;
+        while ((line = in.readLine()) != null) {
+            TreeNode root = Debuger.stringToTreeNode(line);
+            //System.out.print(out);
+        }
+    }
 }
