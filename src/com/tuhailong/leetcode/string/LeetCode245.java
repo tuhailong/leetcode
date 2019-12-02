@@ -22,54 +22,19 @@ import java.util.Map;
  */
 public class LeetCode245 {
     public int shortestWordDistance(String[] words, String word1, String word2) {
-        Map<String, ArrayList<Integer>> map = new HashMap<>();
-        for (int i = 0; i < words.length; i++) {
-            ArrayList<Integer> list = map.getOrDefault(words[i], new ArrayList<>());
-            list.add(i);
-            map.put(words[i], list);
-        }
-        int min = Integer.MAX_VALUE;
-        ArrayList<Integer> list1 = map.get(word1);
-        int len1 = list1.size();
-        if (word1.equals(word2)) {
-            for (int i = 1; i < len1; i++) {
-                min = Math.min(list1.get(i) - list1.get(i - 1), min);
-            }
-            return min;
-        }
-        ArrayList<Integer> list2 = map.get(word2);
-        int len2 = list2.size();
-        int idx1 = 0;
-        int idx2 = 0;
-        while (idx1 < len1 && idx2 < len2) {
-            min = Math.min(Math.abs(list1.get(idx1) - list2.get(idx2)), min);
-            if (list1.get(idx1) < list2.get(idx2)) {
-                ++idx1;
-            } else {
-                ++idx2;
-            }
-        }
-        return min;
-    }
-
-    public int shortestWordDistanceFaster(String[] words, String word1, String word2) {
         int len = words.length;
-        int idx1 = -len;
-        int idx2 = -len;
         int min = Integer.MAX_VALUE;
+        int idx1 = -len;
         if (word1.equals(word2)) {
             for (int i = 0; i < words.length; i++) {
                 if (words[i].equals(word1)) {
-                    if (idx1 < idx2) {
-                        idx1 = i;
-                    } else {
-                        idx2 = i;
-                    }
-                    min = Math.min(Math.abs(idx2 - idx1), min);
+                    min = Math.min(i - idx1, min);
+                    idx1 = i;
                 }
             }
             return min;
         }
+        int idx2 = -len;
         for (int i = 0; i < words.length; i++) {
             if (words[i].equals(word1)) {
                 idx1 = i;
@@ -78,8 +43,13 @@ public class LeetCode245 {
             } else {
                 continue;
             }
-            min = Math.min(Math.abs(idx2 - idx1), min);
+            min = Math.min(Math.abs(idx1 - idx2), min);
         }
         return min;
+    }
+
+    public static void main(String[] args) {
+        LeetCode245 ni = new LeetCode245();
+        System.out.println(ni.shortestWordDistance(new String[] {"practice", "makes", "perfect", "coding", "makes"}, "makes", "makes"));
     }
 }

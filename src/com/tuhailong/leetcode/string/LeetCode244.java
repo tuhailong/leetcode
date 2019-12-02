@@ -2,6 +2,7 @@ package com.tuhailong.leetcode.string;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -23,27 +24,29 @@ import java.util.Map;
  */
 public class LeetCode244 {
     class WordDistance {
-        private final Map<String, ArrayList<Integer>> MAP = new HashMap<>();
+        private Map<String, List<Integer>> mMap;
 
         public WordDistance(String[] words) {
+            mMap = new HashMap<>();
             for (int i = 0; i < words.length; i++) {
-                ArrayList<Integer> list = MAP.getOrDefault(words[i], new ArrayList<>());
+                List<Integer> list = mMap.getOrDefault(words[i], new ArrayList<>());
                 list.add(i);
-                MAP.put(words[i], list);
+                mMap.put(words[i], list);
             }
         }
 
         public int shortest(String word1, String word2) {
-            ArrayList<Integer> idxes1 = MAP.get(word1);
-            ArrayList<Integer> idxes2 = MAP.get(word2);
-            int len1 = idxes1.size();
-            int len2 = idxes2.size();
+            List<Integer> list1 = mMap.get(word1);
+            List<Integer> list2 = mMap.get(word2);
+            int len1 = list1.size();
             int idx1 = 0;
+            int len2 = list2.size();
             int idx2 = 0;
             int min = Integer.MAX_VALUE;
             while (idx1 < len1 && idx2 < len2) {
-                min = Math.min(Math.abs(idxes1.get(idx1) - idxes2.get(idx2)), min);
-                if (idxes1.get(idx1) < idxes2.get(idx2)) {
+                int diff = list1.get(idx1) - list2.get(idx2);
+                min = Math.min(Math.abs(diff), min);
+                if (diff < 0) {
                     ++idx1;
                 } else {
                     ++idx2;

@@ -21,6 +21,9 @@ import java.util.Arrays;
 public class LeetCode186 {
     // 两次反转，先对单个单词反转，然后整体反转
     public void reverseWords(char[] s) {
+        if (s == null || s.length < 2) {
+            return;
+        }
         int lid = 0;
         int rid = 0;
         for (int i = 0; i < s.length; i++) {

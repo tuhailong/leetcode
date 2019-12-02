@@ -48,5 +48,6 @@ public class LeetCode163 {
     public static void main(String[] args) {
         LeetCode163 ni = new LeetCode163();
         ni.findMissingRanges(new int[]{0, 1, 3, 50, 75}, -99, 99);
+        ni.findMissingRanges(new int[]{-2147483648, 2147483647}, -2147483648, 2147483647);
     }
 }
