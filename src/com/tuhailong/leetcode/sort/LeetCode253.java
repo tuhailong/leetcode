@@ -1,4 +1,4 @@
-package com.tuhailong.leetcode;
+package com.tuhailong.leetcode.sort;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;
@@ -22,15 +22,15 @@ class LeetCode253 {
         if (intervals == null || intervals.length == 0) {
             return 0;
         }
-        Arrays.sort(intervals, (o1, o2) -> o1[0] - o2[0]);
-        PriorityQueue<Integer> queue = new PriorityQueue<>(intervals.length);
-        queue.offer(intervals[0][1]);
+        Arrays.sort(intervals, (o1, o2) -> o1[0] == o2[0] ? o1[1] - o2[1] : o1[0] - o2[0]);
+        PriorityQueue<Integer> heap = new PriorityQueue<>();
+        heap.offer(intervals[0][1]);
         for (int i = 1; i < intervals.length; i++) {
-            if (queue.peek() < intervals[i][0]) {
-                queue.poll();
+            if (intervals[i][0] >= heap.peek()) {
+                heap.poll();
             }
-            queue.offer(intervals[i][1]);
+            heap.offer(intervals[i][1]);
         }
-        return queue.size();
+        return heap.size();
     }
 }
