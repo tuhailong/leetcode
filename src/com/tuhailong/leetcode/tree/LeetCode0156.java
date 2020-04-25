@@ -25,7 +25,7 @@ import com.tuhailong.leetcode.TreeNode;
  * @author tuhailong
  * @since 2019-11-29
  */
-public class LeetCode156 {
+public class LeetCode0156 {
     /**
      * 树中任何节点的右子节点若存在一定有左子节点，因此思路是向左遍历树进行转化；
      * 规律：左子节点变父节点；父节点变右子节点；右子节点变父节点。

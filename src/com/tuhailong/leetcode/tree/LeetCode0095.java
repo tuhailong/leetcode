@@ -29,7 +29,7 @@ import java.util.List;
  * @author tuhailong
  * @since 2019-11-27
  */
-class LeetCode95 {
+class LeetCode0095 {
     /**
      * 算法思路：递归
      *  1.从序列1 ..n中取出数字i，作为当前树的树根

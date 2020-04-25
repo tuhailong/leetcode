@@ -27,7 +27,7 @@ import java.util.Queue;
  * @author tuhailong
  * @since 2019-11-27
  */
-class LeetCode101 {
+class LeetCode0101 {
     public boolean isSymmetric(TreeNode root) {
         if (root == null) {
             return true;

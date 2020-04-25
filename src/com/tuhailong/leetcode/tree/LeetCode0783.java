@@ -26,7 +26,7 @@ import java.util.Stack;
  * @author tuhailong
  * @since 2019-11-26
  */
-public class LeetCode783 {
+public class LeetCode0783 {
     public int minDiffInBST(TreeNode root) {
         int min = Integer.MAX_VALUE;
         Stack<TreeNode> stack = new Stack<>();

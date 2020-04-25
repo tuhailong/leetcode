@@ -29,7 +29,7 @@ import java.util.Queue;
  * @author tuhailong
  * @since 2019-11-27
  */
-public class LeetCode103 {
+public class LeetCode0103 {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> ans = new ArrayList<>();
         if (root == null) {

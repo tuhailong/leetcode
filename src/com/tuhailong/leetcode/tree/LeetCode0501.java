@@ -32,7 +32,7 @@ import java.util.Map;
  * @author tuhailong
  * @since 2019-11-27
  */
-class LeetCode501 {
+class LeetCode0501 {
 
     public int[] findMode(TreeNode root) {
         HashMap<Integer, Integer> map = new HashMap<>();
@@ -74,7 +74,7 @@ class LeetCode501 {
         String line;
         while ((line = in.readLine()) != null) {
             TreeNode root = Debuger.stringToTreeNode(line);
-            LeetCode501 ni = new LeetCode501();
+            LeetCode0501 ni = new LeetCode0501();
             System.out.print(Arrays.toString(ni.findMode(root)));
         }
     }

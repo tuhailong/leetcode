@@ -22,7 +22,7 @@ import java.util.Queue;
  * @author tuhailong
  * @since 2019-11-14
  */
-class LeetCode104 {
+class LeetCode0104 {
     public int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;

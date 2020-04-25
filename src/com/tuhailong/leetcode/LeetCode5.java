@@ -29,7 +29,7 @@ class LeetCode5 {
             dp[j][j] = true;
             for (int i = 0; i < j; i++) {
                 if (s.charAt(i) == s.charAt(j)) {
-                    if (j - i <= 2) {
+                    if (j - i < 3) {
                         dp[i][j] = true;
                     } else {
                         dp[i][j] = dp[i + 1][j - 1];

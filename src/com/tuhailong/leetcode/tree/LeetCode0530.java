@@ -26,7 +26,7 @@ import java.util.Stack;
  * @author tuhailong
  * @since 2019-12-11
  */
-public class LeetCode530 {
+public class LeetCode0530 {
 
     private int mMin = Integer.MAX_VALUE;
     private TreeNode mPreNode = null;

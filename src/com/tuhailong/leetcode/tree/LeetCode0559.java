@@ -22,7 +22,7 @@ import java.util.Queue;
  * @author tuhailong
  * @since 2019-11-27
  */
-public class LeetCode559 {
+public class LeetCode0559 {
     // Definition for a Node.
     class Node {
         public int val;

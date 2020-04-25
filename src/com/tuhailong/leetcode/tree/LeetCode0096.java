@@ -18,7 +18,7 @@ package com.tuhailong.leetcode.tree;
  * @author tuhailong
  * @since 2019-11-27
  */
-class LeetCode96 {
+class LeetCode0096 {
     /**
      * 解题思路：动态规划
      * G(n)等于对G(i-1)*G(n-i)的积从1到n求和
