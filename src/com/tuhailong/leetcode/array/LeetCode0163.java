@@ -13,7 +13,7 @@ import java.util.List;
  * @author tuhailong
  * @since 2019-11-30
  */
-public class LeetCode163 {
+public class LeetCode0163 {
     public List<String> findMissingRanges(int[] nums, int lower, int upper) {
         List<String> ans = new ArrayList<>();
         long left = lower;
@@ -46,7 +46,7 @@ public class LeetCode163 {
     }
 
     public static void main(String[] args) {
-        LeetCode163 ni = new LeetCode163();
+        LeetCode0163 ni = new LeetCode0163();
         ni.findMissingRanges(new int[]{0, 1, 3, 50, 75}, -99, 99);
         ni.findMissingRanges(new int[]{-2147483648, 2147483647}, -2147483648, 2147483647);
     }

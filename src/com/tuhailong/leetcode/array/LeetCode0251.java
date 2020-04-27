@@ -22,7 +22,7 @@ import java.util.List;
  * @author tuhailong
  * @since 2019-12-02
  */
-class LeetCode251 {
+class LeetCode0251 {
     class Vector2D {
         int mIndex = 0;
         private List<Integer> mList;

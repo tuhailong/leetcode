@@ -24,7 +24,7 @@ import java.util.Map;
  * @author tuhailong
  * @since 2019-12-02
  */
-class LeetCode249 {
+class LeetCode0249 {
     public List<List<String>> groupStrings(String[] strings) {
         Map<String, List<String>> map = new HashMap<>();
         for (String str : strings) {
@@ -86,7 +86,7 @@ class LeetCode249 {
     public static void main(String[] args) {
         String[] strs1 = {"ab", "ba"};
         String[] strs2 = {"abc", "bcd", "acef", "xyz", "az", "ba", "a", "z"};
-        LeetCode249 ni = new LeetCode249();
+        LeetCode0249 ni = new LeetCode0249();
         //ni.groupStrings(strs1);
         ni.groupStrings(strs2);
     }
