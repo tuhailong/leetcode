@@ -105,7 +105,7 @@ public class Utils {
             }
 
             T postValue = mPostorders[mPostIdx];
-            TreeNode node = new TreeNode(postValue);
+            TreeNode<T> node = new TreeNode(postValue);
             int index = mMap.get(postValue);
 
             mPostIdx--;
@@ -166,7 +166,7 @@ public class Utils {
             }
 
             T preValue = mPreorders[mPreIdx];
-            TreeNode node = new TreeNode(preValue);
+            TreeNode<T> node = new TreeNode(preValue);
             int index = mMap.get(preValue);
 
             mPreIdx++;
