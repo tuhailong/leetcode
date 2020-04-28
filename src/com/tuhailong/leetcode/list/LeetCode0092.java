@@ -1,4 +1,4 @@
-package com.tuhailong.leetcode;
+package com.tuhailong.leetcode.list;
 
 /**
  * 反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。
@@ -12,7 +12,7 @@ package com.tuhailong.leetcode;
  * @author tuhailong
  * @since 2019-11-12
  */
-class LeetCode92 {
+class LeetCode0092 {
 
     public ListNode reverseBetween(ListNode head, int m, int n) {
         if (head == null || head.next == null) {
@@ -63,7 +63,7 @@ class LeetCode92 {
         p.next = new ListNode(4);
         p = p.next;
         p.next = new ListNode(5);
-        LeetCode92 ni = new LeetCode92();
+        LeetCode0092 ni = new LeetCode0092();
         ListNode ans = ni.reverseBetween(head, 2, 4);
         System.out.println(ans);
     }

@@ -1,4 +1,4 @@
-package com.tuhailong.leetcode;
+package com.tuhailong.leetcode.list;
 
 /**
  * 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 
@@ -10,7 +10,7 @@ package com.tuhailong.leetcode;
  * @author tuhailong
  * @since 2019-10-29
  */
-public class LeetCode21 {
+public class LeetCode0021 {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode ans = new ListNode(0);
         ListNode pre = ans;

@@ -1,4 +1,4 @@
-package com.tuhailong.leetcode;
+package com.tuhailong.leetcode.list;
 
 /**
  * 请判断一个链表是否为回文链表。
@@ -17,7 +17,7 @@ package com.tuhailong.leetcode;
  * @author tuhailong
  * @since 2019-10-29
  */
-public class LeetCode234 {
+public class LeetCode0234 {
 
     // 翻转链表的后半部分，然后对比前后是否相等即可
     public boolean isPalindrome(ListNode head) {

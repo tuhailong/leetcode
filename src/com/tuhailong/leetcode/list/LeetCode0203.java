@@ -1,4 +1,4 @@
-package com.tuhailong.leetcode;
+package com.tuhailong.leetcode.list;
 
 /**
  * 删除链表中等于给定值 val 的所有节点。
@@ -10,7 +10,7 @@ package com.tuhailong.leetcode;
  * @author tuhailong
  * @since 2019-11-12
  */
-public class LeetCode203 {
+public class LeetCode0203 {
 
     public ListNode removeElements(ListNode head, int val) {
         // 移除链表首部结点值等于val的节点

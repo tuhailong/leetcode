@@ -1,4 +1,4 @@
-package com.tuhailong.leetcode;
+package com.tuhailong.leetcode.list;
 
 /**
  * 请编写一个函数，使其可以删除某个链表中给定的（非末尾）节点，你将只被给定要求被删除的节点。
@@ -20,7 +20,7 @@ package com.tuhailong.leetcode;
  * @author tuhailong
  * @since 2019-11-11
  */
-class LeetCode237 {
+class LeetCode0237 {
     ListNode head = null;
 
     public void deleteNode(ListNode node) {
@@ -64,7 +64,7 @@ class LeetCode237 {
         p.next = new ListNode(4);
         p = p.next;
         p.next = new ListNode(5);
-        ListNode ans = new LeetCode237().swap(head, 2);
+        ListNode ans = new LeetCode0237().swap(head, 2);
         System.out.println(ans);
     }
 }

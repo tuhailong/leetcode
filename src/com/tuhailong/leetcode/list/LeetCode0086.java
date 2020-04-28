@@ -1,5 +1,4 @@
-package com.tuhailong.leetcode;
-
+package com.tuhailong.leetcode.list;
 
 import java.util.ArrayList;
 
@@ -15,7 +14,7 @@ import java.util.ArrayList;
  * @author tuhailong
  * @since 2019-11-12
  */
-class LeetCode86 {
+class LeetCode0086 {
     public ListNode partition(ListNode head, int x) {
         if (head == null || head.next == null) {
             return head;

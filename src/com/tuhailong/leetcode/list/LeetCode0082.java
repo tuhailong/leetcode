@@ -1,4 +1,4 @@
-package com.tuhailong.leetcode;
+package com.tuhailong.leetcode.list;
 
 import java.util.HashMap;
 
@@ -15,7 +15,7 @@ import java.util.HashMap;
  * @author tuhailong
  * @since 2019-11-12
  */
-class LeetCode82 {
+class LeetCode0082 {
     public ListNode deleteDuplicates(ListNode head) {
         HashMap<Integer, Integer> map = new HashMap<>();
         ListNode p = head;

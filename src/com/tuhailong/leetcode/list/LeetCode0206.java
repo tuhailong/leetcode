@@ -1,4 +1,4 @@
-package com.tuhailong.leetcode;
+package com.tuhailong.leetcode.list;
 
 /**
  * 反转一个单链表。
@@ -12,7 +12,7 @@ package com.tuhailong.leetcode;
  * @author tuhailong
  * @since 2019-10-30
  */
-public class LeetCode206 {
+public class LeetCode0206 {
     public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
@@ -38,7 +38,7 @@ public class LeetCode206 {
         p.next = new ListNode(4);
         p = p.next;
         p.next = new ListNode(5);
-        LeetCode206 ni = new LeetCode206();
+        LeetCode0206 ni = new LeetCode0206();
         ListNode tmps = ni.reverseList(head);
         System.out.println(tmps);
     }

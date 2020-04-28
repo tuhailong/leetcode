@@ -1,4 +1,4 @@
-package com.tuhailong.leetcode;
+package com.tuhailong.leetcode.list;
 
 import java.util.HashSet;
 
@@ -17,7 +17,7 @@ import java.util.HashSet;
  * @author tuhailong
  * @since 2019-11-12
  */
-public class LeetCode83 {
+public class LeetCode0083 {
 
     public ListNode deleteDuplicates(ListNode head) {
         ListNode ans = new ListNode(0);

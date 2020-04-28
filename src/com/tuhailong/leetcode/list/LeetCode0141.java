@@ -1,4 +1,4 @@
-package com.tuhailong.leetcode;
+package com.tuhailong.leetcode.list;
 
 /**
  * 给定一个链表，判断链表中是否有环。
@@ -22,7 +22,7 @@ package com.tuhailong.leetcode;
  * @author tuhailong
  * @since 2019-11-22
  */
-public class LeetCode141 {
+public class LeetCode0141 {
     // 快慢指针的方法
     public static boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) {

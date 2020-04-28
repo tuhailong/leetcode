@@ -1,4 +1,4 @@
-package com.tuhailong.leetcode;
+package com.tuhailong.leetcode.list;
 
 import java.util.HashSet;
 
@@ -26,7 +26,7 @@ import java.util.HashSet;
  * @author tuhailong
  * @since 2019-11-22
  */
-public class LeetCode142 {
+public class LeetCode0142 {
 
     public static ListNode detectCycle(ListNode head) {
         HashSet<ListNode> set = new HashSet<>();

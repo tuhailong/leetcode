@@ -1,4 +1,4 @@
-package com.tuhailong.leetcode;
+package com.tuhailong.leetcode.list;
 
 /**
  * 编写一个程序，找到两个单链表相交的起始节点。
@@ -27,7 +27,7 @@ package com.tuhailong.leetcode;
  * @author tuhailong
  * @since 2019-10-30
  */
-public class LeetCode160 {
+public class LeetCode0160 {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if (headA == null || headB == null) {
             return null;
