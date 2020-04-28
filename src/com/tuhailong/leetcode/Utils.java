@@ -6,8 +6,8 @@ import java.util.Map;
 public class Utils {
     public static void main(String[] args) {
         // 前序与中序，构造后续
-        String preStr = "12473568";
-        String inStr1 = "47215386";
+        String preStr = "ABDCEGFHI"; //"12473568";
+        String inStr1 = "BDAGECHFI";//"47215386";
         Character[] preChars = new Character[preStr.length()];
         int idx = 0;
         for (char ch : preStr.toCharArray()) {
@@ -26,7 +26,7 @@ public class Utils {
         String postStr = "74258631";
         Character[] inChars2 = new Character[inStr2.length()];
         int idx2 = 0;
-        for (char ch : inStr1.toCharArray()) {
+        for (char ch : inStr2.toCharArray()) {
             inChars2[idx2++] = ch;
         }
         Character[] postChars = new Character[postStr.length()];
@@ -35,7 +35,7 @@ public class Utils {
             postChars[idx2++] = ch;
         }
         TreeBuilder<Character> builder2 = new InorderAndPostorderBuilder<>();
-        builder2.printTree(builder2.buildTree(inChars, postChars));
+        builder2.printTree(builder2.buildTree(inChars2, postChars));
     }
 
     public interface TreeBuilder<T> {
