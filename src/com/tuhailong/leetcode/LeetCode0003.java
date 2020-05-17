@@ -1,5 +1,6 @@
 package com.tuhailong.leetcode;
 
+import java.util.HashMap;
 import java.util.HashSet;
 
 /**
@@ -21,29 +22,30 @@ import java.util.HashSet;
  *
  * @author tuhailong
  * @since 2019-10-29
+ * @updated 2020-05-17
  */
-class LeetCode3 {
+class LeetCode0003 {
     public static int lengthOfLongestSubstring(String s) {
         if (s == null || s.isEmpty()) {
             return 0;
         }
-        int len = s.length();
-        int rid = 0;
-        int lid = 0;
         int ans = 0;
-        HashSet<Character> set = new HashSet<>();
-        while (rid < len && lid < len) {
-            if (!set.contains(s.charAt(lid))) {
-                set.add(s.charAt(lid++));
-                ans = Math.max(lid - rid, ans);
-            } else {
-                set.remove(s.charAt(rid++));
+        int lid = 0;
+        int rid = 0;
+        int len = s.length();
+        HashMap<Character, Integer> map = new HashMap<>();
+        while (lid < len && rid < len) {
+            if (map.containsKey(s.charAt(rid))) {
+                lid = Math.max(lid, map.get(s.charAt(rid)) + 1);
             }
+            map.put(s.charAt(rid), rid);
+            ans = Math.max(ans, rid - lid + 1);
+            rid++;
         }
         return ans;
     }
 
     public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstring("pwwkew"));
+        System.out.println(lengthOfLongestSubstring("dvdf"));
     }
 }
