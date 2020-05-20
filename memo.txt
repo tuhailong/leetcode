@@ -1,0 +1,5 @@
+1. 一维数组转二叉树
+	https://leetcode-cn.com/playground/new/binary-tree
+
+2. shuffle算法
+	https://blog.csdn.net/qq_26399665/article/details/79831490
