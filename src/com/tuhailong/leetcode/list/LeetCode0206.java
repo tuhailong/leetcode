@@ -11,6 +11,7 @@ package com.tuhailong.leetcode.list;
  *
  * @author tuhailong
  * @since 2019-10-30
+ * @updated 2020-05-21
  */
 public class LeetCode0206 {
     public ListNode reverseList(ListNode head) {
@@ -20,10 +21,10 @@ public class LeetCode0206 {
         ListNode prev = null;
         ListNode curr = head;
         while (curr != null) {
-            ListNode curNext = curr.next;
+            ListNode next = curr.next;
             curr.next = prev;
             prev = curr;
-            curr = curNext;
+            curr = next;
         }
         return prev;
     }
